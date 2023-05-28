@@ -18,4 +18,3 @@ class HomeCVCell: UICollectionViewCell  {
         menuImageView.image = UIImage(named: "iPadNotes.png")
     }
 }
-

@@ -17,6 +17,7 @@
 		73ED03142A2232C7009D1106 /* MainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED03132A2232C7009D1106 /* MainRepository.swift */; };
 		73ED03162A223350009D1106 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED03152A223350009D1106 /* Network.swift */; };
 		73ED031B2A224280009D1106 /* HomeCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED031A2A224280009D1106 /* HomeCVCell.swift */; };
+		73ED03212A239AA3009D1106 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED03202A239AA3009D1106 /* HomeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		73ED03132A2232C7009D1106 /* MainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
 		73ED03152A223350009D1106 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		73ED031A2A224280009D1106 /* HomeCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCVCell.swift; sourceTree = "<group>"; };
+		73ED03202A239AA3009D1106 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +107,35 @@
 		73ED031C2A2242A1009D1106 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				73ED03012A222EEA009D1106 /* HomeViewController.swift */,
-				73ED031A2A224280009D1106 /* HomeCVCell.swift */,
+				73ED031D2A23996D009D1106 /* Model */,
+				73ED031E2A239979009D1106 /* Controller */,
+				73ED031F2A2399AC009D1106 /* View */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		73ED031D2A23996D009D1106 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73ED03202A239AA3009D1106 /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		73ED031E2A239979009D1106 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				73ED03012A222EEA009D1106 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		73ED031F2A2399AC009D1106 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73ED031A2A224280009D1106 /* HomeCVCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +213,7 @@
 				73ED03142A2232C7009D1106 /* MainRepository.swift in Sources */,
 				73ED03022A222EEA009D1106 /* HomeViewController.swift in Sources */,
 				73ED03162A223350009D1106 /* Network.swift in Sources */,
+				73ED03212A239AA3009D1106 /* HomeModel.swift in Sources */,
 				73ED03122A2231B2009D1106 /* MainCoordinator.swift in Sources */,
 				73ED02FE2A222EEA009D1106 /* AppDelegate.swift in Sources */,
 				73ED03002A222EEA009D1106 /* SceneDelegate.swift in Sources */,
