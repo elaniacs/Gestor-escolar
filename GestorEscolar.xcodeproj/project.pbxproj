@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		73ED02FE2A222EEA009D1106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED02FD2A222EEA009D1106 /* AppDelegate.swift */; };
 		73ED03002A222EEA009D1106 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED02FF2A222EEA009D1106 /* SceneDelegate.swift */; };
-		73ED03022A222EEA009D1106 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED03012A222EEA009D1106 /* ViewController.swift */; };
+		73ED03022A222EEA009D1106 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED03012A222EEA009D1106 /* HomeViewController.swift */; };
 		73ED03052A222EEA009D1106 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73ED03032A222EEA009D1106 /* Main.storyboard */; };
 		73ED03072A222EEC009D1106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73ED03062A222EEC009D1106 /* Assets.xcassets */; };
 		73ED030A2A222EEC009D1106 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73ED03082A222EEC009D1106 /* LaunchScreen.storyboard */; };
+		73ED03122A2231B2009D1106 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED03112A2231B2009D1106 /* MainCoordinator.swift */; };
+		73ED03142A2232C7009D1106 /* MainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED03132A2232C7009D1106 /* MainRepository.swift */; };
+		73ED03162A223350009D1106 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED03152A223350009D1106 /* Network.swift */; };
+		73ED031B2A224280009D1106 /* HomeCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED031A2A224280009D1106 /* HomeCVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		73ED02FA2A222EEA009D1106 /* GestorEscolar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestorEscolar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73ED02FD2A222EEA009D1106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73ED02FF2A222EEA009D1106 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		73ED03012A222EEA009D1106 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		73ED03012A222EEA009D1106 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		73ED03042A222EEA009D1106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73ED03062A222EEC009D1106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73ED03092A222EEC009D1106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73ED030B2A222EEC009D1106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73ED03112A2231B2009D1106 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		73ED03132A2232C7009D1106 /* MainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRepository.swift; sourceTree = "<group>"; };
+		73ED03152A223350009D1106 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		73ED031A2A224280009D1106 /* HomeCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,49 @@
 			children = (
 				73ED02FD2A222EEA009D1106 /* AppDelegate.swift */,
 				73ED02FF2A222EEA009D1106 /* SceneDelegate.swift */,
-				73ED03012A222EEA009D1106 /* ViewController.swift */,
+				73ED03172A2233CE009D1106 /* Network */,
+				73ED03182A2233D8009D1106 /* Repository */,
+				73ED03192A2233EA009D1106 /* Coordinator */,
+				73ED031C2A2242A1009D1106 /* Home */,
 				73ED03032A222EEA009D1106 /* Main.storyboard */,
 				73ED03062A222EEC009D1106 /* Assets.xcassets */,
 				73ED03082A222EEC009D1106 /* LaunchScreen.storyboard */,
 				73ED030B2A222EEC009D1106 /* Info.plist */,
 			);
 			path = GestorEscolar;
+			sourceTree = "<group>";
+		};
+		73ED03172A2233CE009D1106 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				73ED03152A223350009D1106 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		73ED03182A2233D8009D1106 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				73ED03132A2232C7009D1106 /* MainRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		73ED03192A2233EA009D1106 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				73ED03112A2231B2009D1106 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		73ED031C2A2242A1009D1106 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				73ED03012A222EEA009D1106 /* HomeViewController.swift */,
+				73ED031A2A224280009D1106 /* HomeCVCell.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73ED03022A222EEA009D1106 /* ViewController.swift in Sources */,
+				73ED031B2A224280009D1106 /* HomeCVCell.swift in Sources */,
+				73ED03142A2232C7009D1106 /* MainRepository.swift in Sources */,
+				73ED03022A222EEA009D1106 /* HomeViewController.swift in Sources */,
+				73ED03162A223350009D1106 /* Network.swift in Sources */,
+				73ED03122A2231B2009D1106 /* MainCoordinator.swift in Sources */,
 				73ED02FE2A222EEA009D1106 /* AppDelegate.swift in Sources */,
 				73ED03002A222EEA009D1106 /* SceneDelegate.swift in Sources */,
 			);
