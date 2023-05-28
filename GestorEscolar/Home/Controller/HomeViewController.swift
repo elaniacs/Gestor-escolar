@@ -7,24 +7,48 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class HomeViewController: UIViewController {
     
-    var data: [String] = ["Célula 1", "Célula 2", "Célula 3"]
+    var homeViewModel: HomeViewModel?
     
     @IBOutlet weak var collectionView: UICollectionView!
+    weak var mainCoordinator: MainCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        homeViewModel?.getAllMenu(completion: {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        })
+        
+        let cellWidth: CGFloat = (UIScreen.main.bounds.width - 40) / 3.0
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: cellWidth, height: cellWidth + 10)
+        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 10
+        let edgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        layout.sectionInset = edgeInsets
+        collectionView.collectionViewLayout = layout
     }
+}
+
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        homeViewModel?.menuCell.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCVCell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCVCell", for: indexPath) as? HomeCVCell else { return UICollectionViewCell() }
+        
+        if let data = homeViewModel?.menuCell[indexPath.row] {
+            cell.populateCell(data: data)
+        }
+        
         return cell
+     
     }
 }

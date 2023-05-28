@@ -15,6 +15,18 @@ class HomeCVCell: UICollectionViewCell  {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        menuImageView.image = UIImage(named: "iPadNotes.png")
+        
+        contentView.layer.cornerRadius = 20
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowRadius = 2
+    }
+    
+    func populateCell(data: MenuCellModel) {
+        menuImageView.image = UIImage(named: data.icone)
+        menuLabel.text = data.titulo
     }
 }
+

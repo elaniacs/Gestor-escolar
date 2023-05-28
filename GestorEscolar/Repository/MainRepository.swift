@@ -10,8 +10,14 @@ import Foundation
 
 class MainRepository {
     
-    let network = Network()
+    let network = Network(session: URLSession.shared)
     weak var mainCoordinator: MainCoordinator?
+    
+    func getAllMenu(completion: ((HomeModel?) -> Void)?) {
+        network.fetchRequest(urlPath: "/escola/mobile_login.php", httpMethod: .get) { responseData in
+            completion?(responseData)
+        }
+    }
 }
 
 
