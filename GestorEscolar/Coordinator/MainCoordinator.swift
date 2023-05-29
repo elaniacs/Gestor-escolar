@@ -27,17 +27,3 @@ class MainCoordinator {
         }
     }
 }
-
-
-
-
-//func start() {
-//    let launchViewModel = LaunchViewModel()
-//    launchViewModel.mainRepository = mainRepository
-//    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//    if let viewController = storyboard.instantiateViewController(withIdentifier: "LaunchViewController") as? LaunchViewController {
-//        viewController.launchViewModel = launchViewModel
-//        viewController.mainCoordinator = self
-//        navigationController.pushViewController(viewController, animated: true)
-//    }
-//}
