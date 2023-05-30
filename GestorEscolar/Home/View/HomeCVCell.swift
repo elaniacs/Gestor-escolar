@@ -12,7 +12,17 @@ class HomeCVCell: UICollectionViewCell  {
     @IBOutlet weak var menuImageView: UIImageView!
     @IBOutlet weak var menuLabel: UILabel!
     
-    
+    override var isHighlighted: Bool {
+        didSet {
+            UIView.animate(withDuration: 0.1) {
+                if self.isHighlighted {
+                    self.contentView.backgroundColor = UIColor.lightGray
+                } else {
+                    self.contentView.backgroundColor = UIColor.white
+                }
+            }
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         
