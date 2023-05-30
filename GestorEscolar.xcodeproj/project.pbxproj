@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73221B542A252BB1009C0538 /* ScheduleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73221B532A252BB1009C0538 /* ScheduleCellModel.swift */; };
+		736C0A112A2503D500DD22E8 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C0A102A2503D500DD22E8 /* ScheduleModel.swift */; };
+		736C0A142A251BA600DD22E8 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C0A132A251BA600DD22E8 /* ScheduleViewModel.swift */; };
+		736C0A182A25259D00DD22E8 /* ScheduleTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C0A172A25259D00DD22E8 /* ScheduleTVCell.swift */; };
+		736C0A1A2A25264500DD22E8 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C0A192A25264500DD22E8 /* ScheduleViewController.swift */; };
 		73ED02FE2A222EEA009D1106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED02FD2A222EEA009D1106 /* AppDelegate.swift */; };
 		73ED03002A222EEA009D1106 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED02FF2A222EEA009D1106 /* SceneDelegate.swift */; };
 		73ED03022A222EEA009D1106 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED03012A222EEA009D1106 /* HomeViewController.swift */; };
@@ -23,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73221B532A252BB1009C0538 /* ScheduleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCellModel.swift; sourceTree = "<group>"; };
+		736C0A102A2503D500DD22E8 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		736C0A132A251BA600DD22E8 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		736C0A172A25259D00DD22E8 /* ScheduleTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTVCell.swift; sourceTree = "<group>"; };
+		736C0A192A25264500DD22E8 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		736C98052A240F5B002865C6 /* GestorEscolar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GestorEscolar.entitlements; sourceTree = "<group>"; };
 		73ED02FA2A222EEA009D1106 /* GestorEscolar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestorEscolar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73ED02FD2A222EEA009D1106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +62,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		736C0A0E2A25034C00DD22E8 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				736C0A162A251FFE00DD22E8 /* Controller */,
+				736C0A152A251FBA00DD22E8 /* View */,
+				736C0A122A251B2B00DD22E8 /* ViewModel */,
+				736C0A0F2A25035D00DD22E8 /* Model */,
+			);
+			name = Schedule;
+			path = "Horário";
+			sourceTree = "<group>";
+		};
+		736C0A0F2A25035D00DD22E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				736C0A102A2503D500DD22E8 /* ScheduleModel.swift */,
+				73221B532A252BB1009C0538 /* ScheduleCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		736C0A122A251B2B00DD22E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				736C0A132A251BA600DD22E8 /* ScheduleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		736C0A152A251FBA00DD22E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				736C0A172A25259D00DD22E8 /* ScheduleTVCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		736C0A162A251FFE00DD22E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				736C0A192A25264500DD22E8 /* ScheduleViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		73ED02F12A222EEA009D1106 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +133,7 @@
 				73ED03182A2233D8009D1106 /* Repository */,
 				73ED03192A2233EA009D1106 /* Coordinator */,
 				73ED031C2A2242A1009D1106 /* Home */,
+				736C0A0E2A25034C00DD22E8 /* Schedule */,
 				73ED03032A222EEA009D1106 /* Main.storyboard */,
 				73ED03062A222EEC009D1106 /* Assets.xcassets */,
 				73ED03082A222EEC009D1106 /* LaunchScreen.storyboard */,
@@ -225,12 +281,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				736C0A182A25259D00DD22E8 /* ScheduleTVCell.swift in Sources */,
 				73ED031B2A224280009D1106 /* HomeCVCell.swift in Sources */,
 				73ED03142A2232C7009D1106 /* MainRepository.swift in Sources */,
 				73ED03022A222EEA009D1106 /* HomeViewController.swift in Sources */,
 				73ED032A2A23E319009D1106 /* HomeViewModel.swift in Sources */,
+				73221B542A252BB1009C0538 /* ScheduleCellModel.swift in Sources */,
+				736C0A1A2A25264500DD22E8 /* ScheduleViewController.swift in Sources */,
+				736C0A112A2503D500DD22E8 /* ScheduleModel.swift in Sources */,
 				73ED03162A223350009D1106 /* Network.swift in Sources */,
 				73ED03212A239AA3009D1106 /* HomeModel.swift in Sources */,
+				736C0A142A251BA600DD22E8 /* ScheduleViewModel.swift in Sources */,
 				73ED03122A2231B2009D1106 /* MainCoordinator.swift in Sources */,
 				73ED02FE2A222EEA009D1106 /* AppDelegate.swift in Sources */,
 				73ED03282A23E279009D1106 /* MenuCellModel.swift in Sources */,

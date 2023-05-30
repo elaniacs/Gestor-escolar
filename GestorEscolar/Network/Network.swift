@@ -24,20 +24,15 @@ class Network {
         self.session = session
     }
     
-    func fetchRequest <T: Decodable> (urlPath: String, httpMethod: HTTPMethods, completion: @escaping ((_ responseData: T?) -> Void)) {
+    func fetchRequest <T: Decodable> (urlPath: String, httpMethod: HTTPMethods, queryItems: [URLQueryItem], completion: @escaping ((_ responseData: T?) -> Void)) {
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "http"
         urlComponents.host = "camerascomputex.ddns.net"
         urlComponents.port = 8080
         urlComponents.path = urlPath
+        urlComponents.queryItems = queryItems
         
-        let matriculaQueryItem = URLQueryItem(name: "matricula", value: "2011004")
-        let senhaQueryItem = URLQueryItem(name: "senha", value: "99999999")
-        let tokenQueryItem = URLQueryItem(name: "token", value: "X")
-        let soQueryItem = URLQueryItem(name: "so", value: "ios")
-        
-        urlComponents.queryItems = [matriculaQueryItem, senhaQueryItem, tokenQueryItem, soQueryItem]
                 
         guard let url = urlComponents.url else { return }
         var request = URLRequest(url: url)
@@ -72,4 +67,3 @@ class Network {
         task.resume()
     }
 }
-

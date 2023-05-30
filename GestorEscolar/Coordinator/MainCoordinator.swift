@@ -26,4 +26,17 @@ class MainCoordinator {
             navigationController.pushViewController(viewController, animated: true)
         }
     }
+    
+    func callScheduleViewController() {
+        let scheduleViewModel = ScheduleViewModel()
+        scheduleViewModel.mainRepository = mainRepository
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "ScheduleViewController") as? ScheduleViewController {
+            viewController.scheduleViewModel = scheduleViewModel
+            viewController.mainCoordinator = self
+            navigationController.pushViewController(viewController, animated: true)
+        }
+    }
 }
+
+
