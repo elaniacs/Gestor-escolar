@@ -25,6 +25,7 @@
 		73ED03212A239AA3009D1106 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED03202A239AA3009D1106 /* HomeModel.swift */; };
 		73ED03282A23E279009D1106 /* MenuCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED03272A23E279009D1106 /* MenuCellModel.swift */; };
 		73ED032A2A23E319009D1106 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ED03292A23E319009D1106 /* HomeViewModel.swift */; };
+		73F8D84C2A2680F9000E1976 /* ScheduleTVHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F8D84B2A2680F9000E1976 /* ScheduleTVHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		73ED03202A239AA3009D1106 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		73ED03272A23E279009D1106 /* MenuCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCellModel.swift; sourceTree = "<group>"; };
 		73ED03292A23E319009D1106 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		73F8D84B2A2680F9000E1976 /* ScheduleTVHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTVHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				736C0A172A25259D00DD22E8 /* ScheduleTVCell.swift */,
+				73F8D84B2A2680F9000E1976 /* ScheduleTVHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				736C0A182A25259D00DD22E8 /* ScheduleTVCell.swift in Sources */,
+				73F8D84C2A2680F9000E1976 /* ScheduleTVHeader.swift in Sources */,
 				73ED031B2A224280009D1106 /* HomeCVCell.swift in Sources */,
 				73ED03142A2232C7009D1106 /* MainRepository.swift in Sources */,
 				73ED03022A222EEA009D1106 /* HomeViewController.swift in Sources */,

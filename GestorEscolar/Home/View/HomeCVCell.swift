@@ -26,6 +26,7 @@ class HomeCVCell: UICollectionViewCell  {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        menuImageView.tintColor = UIColor.orange
         contentView.layer.cornerRadius = 20
         layer.masksToBounds = false
         layer.shadowColor = UIColor.black.cgColor
@@ -35,7 +36,7 @@ class HomeCVCell: UICollectionViewCell  {
     }
     
     func populateCell(data: MenuCellModel) {
-        menuImageView.image = UIImage(named: data.icone)
+        menuImageView.image = UIImage(named: data.icone)?.withRenderingMode(.alwaysTemplate)
         menuLabel.text = data.titulo
     }
 }

@@ -37,7 +37,6 @@ class Network {
         guard let url = urlComponents.url else { return }
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue
-        print(url)
         
         let task = session.dataTask(with: request) { data, response, error in
             

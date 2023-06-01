@@ -15,10 +15,6 @@ class ScheduleTVCell: UITableViewCell {
     @IBOutlet weak var teacherLabel: UILabel!
     @IBOutlet weak var timeInterval: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     func populateCell(data: ScheduleCellModel) {
         courseLabel.text = data.disciplina
         teacherLabel.text = data.formatedProfessor()

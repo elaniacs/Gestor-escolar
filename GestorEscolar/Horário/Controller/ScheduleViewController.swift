@@ -15,11 +15,18 @@ class ScheduleViewController: UIViewController {
     @IBOutlet weak var scheduleTableView: UITableView!
     weak var mainCoordinator: MainCoordinator?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "HORÁRIO"
         scheduleTableView.delegate = self
         scheduleTableView.dataSource = self
+       
+        
+        if #available(iOS 15.0, *) {
+            scheduleTableView.sectionHeaderTopPadding = 0
+        }
+        
         scheduleViewModel?.gellAllSchedule(completion: {
             DispatchQueue.main.async {
                 self.scheduleTableView.reloadData()
@@ -27,7 +34,6 @@ class ScheduleViewController: UIViewController {
         })
     }
 }
-
 
 extension ScheduleViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -45,9 +51,20 @@ extension ScheduleViewController: UITableViewDataSource, UITableViewDelegate {
         if let data = scheduleViewModel?.scheduleCell[indexPath.section][indexPath.row] {
             cell.populateCell(data: data)
         }
-        
         return cell
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = ScheduleTVHeader(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 24))
+        header.populateHeader(title: scheduleViewModel?.schedule?.horario[section].dia)
+        return header
+    }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView()
+    }
 }

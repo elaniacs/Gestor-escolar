@@ -14,11 +14,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     weak var mainCoordinator: MainCoordinator?
     
+    override func viewWillAppear(_ animated: Bool) {
+        title = "E.E.F.M. CS"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        title = "Colégio Computex"
         homeViewModel?.getAllMenu(completion: {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -33,6 +36,10 @@ class HomeViewController: UIViewController {
         let edgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.sectionInset = edgeInsets
         collectionView.collectionViewLayout = layout
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        title = ""
     }
 }
 
